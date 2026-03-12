@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phoenix Investment Market</title>
 
   <style>
@@ -62,7 +63,14 @@ p {
   }
 
   @media only screen and (max-width: 600px) {
-    .container { width: 90%; }
+    .container {
+  width: 100%;
+  padding: 0 14px;
+}
+
+arcgis-embedded-map {
+    height: 380px !important;
+  }
     p { font-size: 16px; }
 #desktop{ 
 display: none; 
@@ -172,4 +180,5 @@ display:none;
 
 </body>
 </html>
+
 
