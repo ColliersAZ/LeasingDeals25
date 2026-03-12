@@ -7,6 +7,10 @@
 
   <style>
 
+* {
+  box-sizing: border-box;
+}
+
   body {
     font-family: 'PT Serif', serif;
     background-color: #f3efe4;
@@ -62,31 +66,51 @@ p {
     margin-bottom: 0.5rem;
   }
 
-  @media only screen and (max-width: 600px) {
-    .container {
+  arcgis-embedded-map {
+ display: block;
   width: 100%;
   max-width: 100%;
-  display: block;
-  margin:0;
-  padding: 0 14px;
+  margin: 1rem 0;
 }
 
-arcgis-embedded-map {
-    height: 380px !important;
+@media only screen and (max-width: 600px) {
+  .container {
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 14px;
+    text-align: left;
   }
 
-body {
-  overflow-x: hidden;
-}
-    p { font-size: 16px; }
-#desktop{ 
-display: none; 
- } 
-#mobile{ 
- display:block; 
-}    
+  .card {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
+
+  arcgis-embedded-map {
+    width: 100% !important;
+    max-width: 100%;
+    height: 380px !important;
+    display: block;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+  }
+}
 
 
   @media only screen and (min-width: 600px) { 
@@ -125,7 +149,7 @@ display:none;
 <!-- Add script to the <head> of your page to load the embeddable map component -->
 <script type="module" src="https://atlas.colliers.com/portal/apps/mapviewer/node_modules/@arcgis/embeddable-components/dist/arcgis-embeddable-components/arcgis-embeddable-components.esm.js"></script>
 <!-- Add custom element to <body> of your page -->
- <arcgis-embedded-map style="height:600px;width:100%;" item-id="2832412bd295413c909e0052b1edefe7" theme="light" portal-url="https://atlas.colliers.com/portal" ></arcgis-embedded-map>
+ <arcgis-embedded-map style="height:600px;" item-id="2832412bd295413c909e0052b1edefe7" theme="light" portal-url="https://atlas.colliers.com/portal" ></arcgis-embedded-map>
 
  <div style="
   margin-top: 10px;
@@ -154,7 +178,7 @@ display:none;
 <!-- Add script to the <head> of your page to load the embeddable map component -->
 <script type="module" src="https://atlas.colliers.com/portal/apps/mapviewer/node_modules/@arcgis/embeddable-components/dist/arcgis-embeddable-components/arcgis-embeddable-components.esm.js"></script>
 <!-- Add custom element to <body> of your page -->
- <arcgis-embedded-map style="height:600px;width:100%;" item-id="50d4cc7b54a045ad9d92f30d12c9e55d" theme="light" portal-url="https://atlas.colliers.com/portal" ></arcgis-embedded-map>
+ <arcgis-embedded-map style="height:600px;" item-id="50d4cc7b54a045ad9d92f30d12c9e55d" theme="light" portal-url="https://atlas.colliers.com/portal" ></arcgis-embedded-map>
 
 <div style="
   margin-top: 10px;
@@ -188,5 +212,6 @@ display:none;
 
 </body>
 </html>
+
 
 
