@@ -41,7 +41,7 @@ p {
 
 
   .container {
-    width: 75%;
+    width: 85%;
     margin: 5% auto;
     text-align: left;
   }
@@ -65,13 +65,20 @@ p {
   @media only screen and (max-width: 600px) {
     .container {
   width: 100%;
+  max-width: 100%;
+  display: block;
   margin:0;
   padding: 0 14px;
 }
+
 arcgis-embedded-map {
     height: 380px !important;
     width: 100%;
   }
+
+body {
+  overflow-x: hidden;
+}
     p { font-size: 16px; }
 #desktop{ 
 display: none; 
@@ -181,7 +188,5 @@ display:none;
 
 </body>
 </html>
-
-
 
 
